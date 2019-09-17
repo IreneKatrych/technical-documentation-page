@@ -1,0 +1,101 @@
+/*
+User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
+User Story #15: My Technical Documentation page should use at least one media query.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
+
+body{
+    background-color: #daf6fa;
+    font-family: 'Hepta Slab', serif;
+    min-width: 290px;
+}
+
+#navbar{
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+    border-color: #FADEDA;
+}
+
+#navbar ul{
+    padding: 0;
+}
+
+#navbar li{
+    list-style: none;
+    position: relative;
+    width: 100%;
+    border-block-end: 1px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+#main-doc{
+    position: absolute;
+    margin-left: 320px;
+    padding: 20px;
+    margin-bottom: 110px;
+}
+
+.main-section{
+    margin: 10px 30px 10px 30px;
+}
+
+h1{
+    font-size: 20px;
+}
+
+.nav-link{
+    padding: 0px 15px 0px 5px;
+    font-size: 20px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.codes{
+    border: 1px solid #FADEDA;
+    background-color: #FADEDA;
+    padding: 5px;
+    margin: 20px;
+}
+
+td{
+    border-block-end: 1px solid black;
+}
+
+th{
+    border-block-end: 1px solid black;
+    border-block-start: 1px solid black;
+    background-color: #FADEDA;
+    text-align: start;
+}
+
+@media (max-width: 400px){
+    #navbar ul{
+        border: 1px solid;
+        height: 207px;
+    }
+    
+    #navbar{
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    }
+
+    #main-doc{
+    position: relative;
+    margin-left: 0px;
+    margin-top: 275px;
+    }
+}

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Technical Documentation Page for C#</title>
+    <link rel="stylesheet" type="text/css" href="TechnicalDocumentationPage.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>
+            <h1>C# Tutorial</h1>
+        </header>
+        <div class="nav-links">
+            <ul class="navigation">
+                <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+                <li><a class="nav-link" href="#Environment">Environment</a></li>
+                <li> <a class="nav-link" href="#Program_Structure">Program Structure</a></li>
+                <li><a class="nav-link" href="#Basic_Syntax">Basic Syntax</a></li>
+                <li><a class="nav-link" href="#Data_Types">Data Types</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <!--id example Javascript_and_Java-->
+            <header>
+                <h2>Introduction</h2>
+                <!--header example Javascript and Java-->
+            </header>
+            <p>C# is a simple, modern, general-purpose, object-oriented programming language developed by
+                Microsoft within its .NET initiative led by Anders Hejlsberg. This tutorial will teach
+                you basic C# programming and will also take you through various advanced concepts related to C#
+                programming language.</p>
+            <h3>Audience</h3>
+            <p>This tutorial has been prepared for the beginners to help them understand basic C# programming.</p>
+            <h3>Prerequisites</h3>
+            <p>C# programming is very much based on C and C++ programming languages, so if you have a basic
+                understanding of C or C++ programming, then it will be fun to learn C#.</p>
+
+            <!--
+    User Story #5: The .main-section elements should contain at least 10 p elements total (not each).
+    User Story #6: The .main-section elements should contain at least 5 code elements total (not each).
+    User Story #7: The .main-section elements should contain at least 5 li items total (not each).
+-->
+        </section>
+        <section class="main-section" id="Environment">
+            <header>
+                <h2>Environment</h2>
+            </header>
+            <p>In this chapter, we will discuss the tools required for creating C# programming. We have already
+                mentioned that C# is part of .Net framework and is used for writing .Net applications. Therefore, before
+                discussing the available tools for running a C# program, let us understand how C# relates to the .Net
+                framework.</p>
+            <h3>The .Net Framework</h3>
+            <p>The .Net framework is a revolutionary platform that helps you to write the following types of
+                applications −</p>
+            <ul>
+                <li>Windows applications</li>
+                <li>Web applications</li>
+                <li>Web services</li>
+            </ul>
+            <p>The .Net framework applications are multi-platform applications. The framework has been designed in such
+                a way that it can be used from any of the following languages: C#, C++, Visual Basic, Jscript, COBOL,
+                etc. All these languages can access the framework as well as communicate with each other.</p>
+            <p>The .Net framework consists of an enormous library of codes used by the client languages such as C#.
+                Following are some of the components of the .Net framework −</p>
+            <ul>
+                <li>Common Language Runtime (CLR)</li>
+                <li>The .Net Framework Class Library</li>
+                <li>Common Language Specification</li>
+                <li>Common Type System</li>
+                <li>Metadata and Assemblies</li>
+                <li>Windows Forms</li>
+                <li>ASP.Net and ASP.Net AJAX</li>
+                <li>ADO.Net</li>
+                <li>Windows Workflow Foundation (WF)</li>
+                <li>Windows Presentation Foundation</li>
+                <li>Windows Presentation Foundation</li>
+                <li>LINQ</li>
+            </ul>
+            <p>For the jobs each of these components perform, please see <a
+                    href="https://www.tutorialspoint.com/asp.net/asp.net_introduction.htm">ASP.Net - Introduction</a>,
+                and for details of each component, please consult Microsoft's documentation.</p>
+            <h3>Integrated Development Environment (IDE) for C#</h3>
+            <p>Microsoft provides the following development tools for C# programming −</p>
+            <ul>
+                <li>Visual Studio 2010 (VS)</li>
+                <li>Visual C# 2010 Express (VCE)</li>
+                <li>Visual Web Developer</li>
+            </ul>
+            <p>The last two are freely available from Microsoft official website. Using these tools, you can write all
+                kinds of C# programs from simple command-line applications to more complex applications. You can also
+                write C# source code files using a basic text editor, like Notepad, and compile the code into assemblies
+                using the command-line compiler, which is again a part of the .NET Framework.</p>
+            <p>Visual C# Express and Visual Web Developer Express edition are trimmed down versions of Visual Studio and
+                has the same appearance. They retain most features of Visual Studio. In this tutorial, we have used
+                Visual C# 2010 Express.</p>
+            <p>You can download it from <a href="https://www.microsoft.com/visualstudio/eng/downloads">Microsoft Visual
+                    Studio</a>. It gets installed automatically on your machine.</p>
+            <p>Note: You need an active internet connection for installing the express edition.</p>
+            <h3>Writing C# Programs on Linux or Mac OS</h3>
+            <p>Although the.NET Framework runs on the Windows operating system, there are some alternative versions that
+                work on other operating systems. Mono is an open-source version of the .NET Framework which includes a
+                C# compiler
+                and runs on several operating systems, including various flavors of Linux and Mac OS. Kindly check <a
+                    href="http://www.go-mono.com/mono-downloads/download.html">Go Mono</a>.</p>
+        </section>
+        <section class="main-section" id="Program_Structure">
+            <header>
+                <h2>Program Structure</h2>
+            </header>
+            <p>Before we study basic building blocks of the C# programming language, let us look at a bare minimum C#
+                program structure so that we can take it as a reference in upcoming chapters.</p>
+            <h3>Creating Hello World Program</h3>
+            <p>A C# program consists of the following parts −</p>
+            <ul>
+                <li>Namespace declaration</li>
+                <li>A class</li>
+                <li>Class methods</li>
+                <li>Class attributes</li>
+                <li>A Main method</li>
+                <li>Statements and Expressions</li>
+                <li>Comments</li>
+            </ul>
+            <p>Let us look at a simple code that prints the words "Hello World" −</p>
+            <div class="codes">
+                <code>
+                            using System;<br>
+                            namespace HelloWorldApplication {<br>
+                               class HelloWorld {<br>
+                                  static void Main(string[] args) {<br>
+                                     /* my first program in C# */<br>
+                                     Console.WriteLine("Hello World");<br>
+                                     Console.ReadKey();<br>
+                                  }<br>
+                               }<br>
+                            }
+                    </code>
+            </div>
+            <br>
+            <p>When this code is compiled and executed, it produces the following result −</p>
+            <div class="codes"> <code>Hello World</code></div>
+            <p>Let us look at the various parts of the given program −</p>
+            <ul>
+                <li>The first line of the program <b>using System</b>; - the <b>using</b> keyword is used to include the
+                    <b>System</b> namespace in the program. A program generally has multiple <b>using</b> statements.
+                </li>
+                <li>The next line has the <b>namespace</b> declaration. A <b>namespace</b> is a collection of classes.
+                    The <i>HelloWorldApplication</i> namespace contains the class <i>HelloWorld</i>.</li>
+                <li>The next line has a <b>class</b> declaration, the class <i>HelloWorld</i> contains the data and
+                    method definitions that your program uses. Classes generally contain multiple methods. Methods
+                    define the behavior of the class. However, the <i>HelloWorld</i> class has only one method
+                    <b>Main</b>.</li>
+                <li>The next line defines the <b>Main</b> method, which is the <b>entry point</b> for all C# programs.
+                    The <b>Main</b> method states what the class does when executed.</li>
+                <li>The next line /*...*/ is ignored by the compiler and it is put to add <b>comments</b> in the
+                    program.</li>
+                <li>
+                    <p>The Main method specifies its behavior with the statement <b>Console.WriteLine("Hello
+                            World");</b></p>
+                    <p><i>WriteLine</i> is a method of the <i>Console</i> class defined in the <i>System</i> namespace.
+                        This statement causes the message "Hello, World!" to be displayed on the screen.</p>
+                </li>
+                <li>The last line <b>Console.ReadKey();</b> is for the VS.NET Users. This makes the program wait for a
+                    key press and it prevents the screen from running and closing quickly when the program is launched
+                    from Visual Studio .NET.</li>
+            </ul>
+            <p>It is worth to note the following points −</p>
+            <ul>
+                <li>C# is case sensitive.</li>
+                <li>All statements and expression must end with a semicolon (;).</li>
+                <li>The program execution starts at the Main method.</li>
+                <li>Unlike Java, program file name could be different from the class name.</li>
+            </ul>
+            <h3>Compiling and Executing the Program</h3>
+            <p>If you are using Visual Studio.Net for compiling and executing C# programs, take the following steps −
+            </p>
+            <ul>
+                <li>Start Visual Studio.</li>
+                <li>On the menu bar, choose File -> New -> Project.</li>
+                <li>Choose Visual C# from templates, and then choose Windows.</li>
+                <li>Choose Console Application.</li>
+                <li>Specify a name for your project and click OK button.</li>
+                <li>This creates a new project in Solution Explorer.</li>
+                <li>Write code in the Code Editor.</li>
+                <li>Click the Run button or press F5 key to execute the project. A Command Prompt window appears that
+                    contains the line Hello World.</li>
+            </ul>
+            <p>You can compile a C# program by using the command-line instead of the Visual Studio IDE −</p>
+            <ul>
+                <li>Open a text editor and add the above-mentioned code.</li>
+                <li>Save the file as <b>helloworld.cs</b></li>
+                <li>Open the command prompt tool and go to the directory where you saved the file.</li>
+                <li>Type <b>csc helloworld.cs</b> and press enter to compile your code.</li>
+                <li>If there are no errors in your code, the command prompt takes you to the next line and generates
+                    <b>helloworld.exe</b> executable file.</li>
+                <li>Type <b>helloworld</b> to execute your program.</li>
+                <li>You can see the output Hello World printed on the screen.</li>
+            </ul>
+        </section>
+        <section class="main-section" id="Basic_Syntax">
+            <header>
+                <h2>Basic Syntax</h2>
+            </header>
+            <p> C# is an object-oriented programming language. In Object-Oriented Programming methodology, a program
+                consists of various objects that interact with each other by means of actions. The actions that an
+                object may take are called methods. Objects of the same kind are said to have the same type or, are said
+                to be in the same class.</p>
+            <p>For example, let us consider a Rectangle object. It has attributes such as length and width. Depending
+                upon the design, it may need ways for accepting the values of these attributes, calculating the area,
+                and displaying details.</p>
+            <p>Let us look at implementation of a Rectangle class and discuss C# basic syntax −</p>
+            <div class="codes">
+                <code>
+                    using System;<br>
+                    namespace RectangleApplication {<br>
+                    class Rectangle {<br>
+                    // member variables<br>
+                    double length;<br>
+                    double width;<br>
+                    public void Acceptdetails() {<br>
+                    length = 4.5;    <br>
+                    width = 3.5;<br>
+                    }<br>
+                    public double GetArea() {<br>
+                    return length * width; <br>
+                    }<br>
+                    public void Display() {<br>
+                    Console.WriteLine("Length: {0}", length);<br>
+                    Console.WriteLine("Width: {0}", width);<br>
+                    Console.WriteLine("Area: {0}", GetArea());<br>
+                    }<br>
+                    }<br>
+                    class ExecuteRectangle {<br>
+                    static void Main(string[] args) {<br>
+                    Rectangle r = new Rectangle();<br>
+                    r.Acceptdetails();<br>
+                    r.Display();<br>
+                    Console.ReadLine();<br> 
+                    }<br>
+                    }<br>
+                    }
+                   </code>
+            </div><br>
+            <p>When the above code is compiled and executed, it produces the following result −</p>
+            <div class="codes">
+                <code>Length: 4.5<br>
+                    Width: 3.5<br>
+                    Area: 15.75
+                    </code>
+            </div><br>
+            <h3>The <i>using</i> Keyword</h3>
+            <p>The first statement in any C# program is</p>
+            <div class="codes"> <code>using System;</code></div><br>
+            <p>The <b>using</b> keyword is used for including the namespaces in the program. A program can include
+                multiple using statements.</p>
+            <h3>The <i>class</i> Keyword</h3>
+            <p>The <b>class</b> keyword is used for declaring a class.</p>
+            <h3>Comments in C#</h3>
+            <p>Comments are used for explaining code. Compilers ignore the comment entries. The multiline comments in C#
+                programs start with /* and terminates with the characters */ as shown below −</p>
+            <div class="codes">
+                <code>
+                    /* This program demonstrates<br>
+                    The basic syntax of C# programming <br>
+                    Language */
+                    </code>
+            </div><br>
+            <p>Single-line comments are indicated by the '//' symbol. For example,</p>
+            <div class="codes"><code>}//end class Rectangle</code></div><br>
+            <h3>Member Variables</h3>
+            <p>Variables are attributes or data members of a class, used for storing data. In the preceding program, the
+                <i>Rectangle</i> class has two member variables named <i>length</i> and <i>width</i>.</p>
+            <h3>Member Functions</h3>
+            <p>Functions are set of statements that perform a specific task. The member functions of a class are
+                declared within the class. Our sample class Rectangle contains three member functions:
+                <i>AcceptDetails</i>, <i>GetArea</i> and <i>Display</i>.</p>
+            <h3>Instantiating a Class</h3>
+            <p>In the preceding program, the class <i>ExecuteRectangle</i> contains the <i>Main()</i> method and
+                instantiates the <i>Rectangle</i> class.</p>
+            <h3>Identifiers</h3>
+            <p>An identifier is a name used to identify a class, variable, function, or any other user-defined item. The
+                basic rules for naming classes in C# are as follows −</p>
+            <ul>
+                <li>A name must begin with a letter that could be followed by a sequence of letters, digits (0 - 9) or
+                    underscore. The first character in an identifier cannot be a digit.</li>
+                <li>It must not contain any embedded space or symbol such as? - + ! @ # % ^ & * ( ) [ ] { } . ; : " ' /
+                    and \. However, an underscore ( _ ) can be used.</li>
+                <li>It should not be a C# keyword.</li>
+            </ul>
+            <h3>C# Keywords</h3>
+            <p>Keywords are reserved words predefined to the C# compiler. These keywords cannot be used as identifiers.
+                However, if you want to use these keywords as identifiers, you may prefix the keyword with the @
+                character.</p>
+            <p>In C#, some identifiers have special meaning in context of code, such as get and set are called
+                contextual keywords.</p>
+        </section>
+        <section class="main-section" id="Data_Types">
+            <header>
+                <h2>Data Types</h2>
+            </header>
+            <p>The variables in C#, are categorized into the following types −</p>
+            <ul>
+                <li>Value types</li>
+                <li>Reference types</li>
+                <li>Pointer types</li>
+            </ul>
+            <h3>Value Type</h3>
+            <p>Value type variables can be assigned a value directly. They are derived from the class
+                <b>System.ValueType</b>.</p>
+            <p>The value types directly contain data. Some examples are <b>int</b>, <b>char</b>, and <b>float</b>, which
+                stores numbers, alphabets, and floating point numbers, respectively. When you declare an <b>int</b>
+                type, the system allocates memory to store the value.</p>
+            <p>The following table lists the available value types in C# 2010 −</p>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Represents</th>
+                    <th>Range</th>
+                    <th>Default Value</th>
+                </tr>
+                <tr>
+                    <td>bool</td>
+                    <td>Boolean value</td>
+                    <td>True or False</td>
+                    <td>False</td>
+                </tr>
+                <tr>
+                    <td>byte</td>
+                    <td>8-bit unsigned integer</td>
+                    <td>0 to 255</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>16-bit Unicode character</td>
+                    <td>U +0000 to U +ffff</td>
+                    <td>'\0'</td>
+                </tr>
+                <tr>
+                    <td>decimal</td>
+                    <td>128-bit precise decimal values with 28-29 significant digits</td>
+                    <td>(-7.9 x 10<sup>28</sup> to 7.9 x 10<sup>28</sup>) / 10<sup>0</sup> to 28</td>
+                    <td>0.0M</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>64-bit double-precision floating point type</td>
+                    <td>(+/-)5.0 x 10<sup>-324</sup> to (+/-)1.7 x 10<sup>308</sup></td>
+                    <td>0.0D</td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>32-bit single-precision floating point type</td>
+                    <td>-3.4 x 10<sup>38</sup> to + 3.4 x 10<sup>38</sup></td>
+                    <td>0.0F</td>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>32-bit signed integer type</td>
+                    <td>-2,147,483,648 to 2,147,483,647</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>64-bit signed integer type</td>
+                    <td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+                    <td>0L</td>
+                </tr>
+                <tr>
+                    <td>sbyte</td>
+                    <td>8-bit signed integer type</td>
+                    <td>-128 to 127</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>short</td>
+                    <td>16-bit signed integer type</td>
+                    <td>-32,768 to 32,767</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>uint</td>
+                    <td>32-bit unsigned integer type</td>
+                    <td>0 to 4,294,967,295</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>ulong</td>
+                    <td>64-bit unsigned integer type</td>
+                    <td>0 to 18,446,744,073,709,551,615</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>ushort</td>
+                    <td>16-bit unsigned integer type</td>
+                    <td>0 to 65,535</td>
+                    <td>0</td>
+                </tr>
+            </table>
+            <p>To get the exact size of a type or a variable on a particular platform, you can use the <b>sizeof</b>
+                method. The expression <i>sizeof(type)</i> yields the storage size of the object or type in bytes.
+                Following is an example to get the size of <i>int</i> type on any machine −</p>
+            <div class="codes">
+                <code>using System;<br>
+                        <br>
+                        namespace DataTypeApplication {<br>
+                           class Program {<br>
+                              static void Main(string[] args) {<br>
+                                 Console.WriteLine("Size of int: {0}", sizeof(int));<br>
+                                 Console.ReadLine();<br>
+                              }<br>
+                           }<br>
+                        }
+                    </code>
+            </div><br>
+            <p>When the above code is compiled and executed, it produces the following result −</p>
+            <div class="codes"> <code>Size of int: 4</code></div><br>
+            <h3>Reference Type</h3>
+            <p>The reference types do not contain the actual data stored in a variable, but they contain a reference to
+                the variables.</p>
+            <p>In other words, they refer to a memory location. Using multiple variables, the reference types can refer
+                to a memory location. If the data in the memory location is changed by one of the variables, the other
+                variable automatically reflects this change in value. Example of <b>built-in</b> reference types are:
+                <b>object</b>, <b>dynamic</b>, and <b>string</b>.</p>
+            <h3>Object Type</h3>
+            <p>The <b>Object Type</b> is the ultimate base class for all data types in C# Common Type System (CTS).
+                Object is an alias for System.Object class. The object types can be assigned values of any other types,
+                value types, reference types, predefined or user-defined types. However, before assigning values, it
+                needs type conversion.</p>
+            <p>When a value type is converted to object type, it is called <b>boxing</b> and on the other hand, when an
+                object type is converted to a value type, it is called <b>unboxing</b>.</p>
+            <div class="codes">
+                <code>object obj;<br>
+                        obj = 100; // this is boxing
+                    </code>
+            </div><br>
+            <h3>Dynamic Type</h3>
+            <p>You can store any type of value in the dynamic data type variable. Type checking for these types of
+                variables takes place at run-time.</p>
+            <p>Syntax for declaring a dynamic type is −</p>
+            <div class="codes"><code>dynamic <variable_name> = value;</code></div><br>
+            <p>For example,</p>
+            <div class="codes"><code>dynamic d = 20;</code></div><br>
+            <p>Dynamic types are similar to object types except that type checking for object type variables takes place
+                at compile time, whereas that for the dynamic type variables takes place at run time.</p>
+            <h3>String Type</h3>
+            <p>The <b>String Type</b> allows you to assign any string values to a variable. The string type is an alias
+                for the System.String class. It is derived from object type. The value for a string type can be assigned
+                using string literals in two forms: quoted and @quoted.</p>
+            <p>For example,</p>
+            <div class="codes"><code>String str = "Tutorials Point";</code></div><br>
+            <p>A @quoted string literal looks as follows −</p>
+            <div class="codes"><code>@"Tutorials Point";</code></div><br>
+            <p>The user-defined reference types are: class, interface, or delegate. We will discuss these types in later
+                chapter.</p>
+            <h3>Pointer Type</h3>
+            <p>Pointer type variables store the memory address of another type. Pointers in C# have the same
+                capabilities as the pointers in C or C++.</p>
+            <p>Syntax for declaring a pointer type is −</p>
+            <div class="codes"><code>type* identifier;</code></div><br>
+            <p>For example,</p>
+            <div class="codes">
+                <code>char* cptr;<br>
+                        int* iptr;</code>
+            </div><br>
+            <p>We will discuss pointer types in the chapter 'Unsafe Codes'.</p>
+        </section>
+        <footer>
+            <p>This is not full tutorial.</p>
+            <p>All the documentation in this page is taken from <a
+                    href="https://www.tutorialspoint.com/csharp/index.htm">tutorialspoint</a>.</p>
+        </footer>
+    </main>
+</body>
+
+</html>
